@@ -2,6 +2,8 @@ var app = require('express')();
 var express = require('express');
 var http = require('http').createServer(app);
 var io = require('socket.io')(http);
+var port = process.env.PORT || 3000;
+
 app.use(express.static('public'))
 
 app.get('/', function(req, res){
@@ -9,5 +11,5 @@ app.get('/', function(req, res){
 });
 
 http.listen(80, function(){
-  console.log('listening on *:80');
+  console.log('listening on *:' + port);
 });

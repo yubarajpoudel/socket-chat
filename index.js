@@ -10,6 +10,6 @@ app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
 });
 
-http.listen(80, function(){
+http.listen(port, function(){
   console.log('listening on *:' + port);
 });
